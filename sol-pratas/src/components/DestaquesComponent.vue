@@ -1,6 +1,6 @@
 <template>
     <div class="w100 ">
-        <div class="w100 destaques q-py-md text-h3 text-weight-bold low-opacity text-center q-mb-xs">Destaques</div>
+        <div class="w100 destaques q-py-md text-h4  low-opacity text-center q-mb-xs">Destaques</div>
         <div class="cards row no-wrap q-gutter-x-md q-mb-xl justify-center items-center">
             <div>
                 <q-card class="my-card">
@@ -73,10 +73,10 @@
 }
 
 .destaques {
-  background: #6190E8;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #FFFDE7, #fff);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #FFFDE7, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #6190E8;   /* fallback for old browsers */
+  background: -webkit-lin ear-gradient(to top, #FFFDE7, #fff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #FFFDE7, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 </style>
