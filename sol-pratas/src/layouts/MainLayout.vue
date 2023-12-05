@@ -1,31 +1,34 @@
 <template>
-  <q-layout view="hHh lpR lfr">
+  <q-layout view="hHr lpr lfr">
 
-    <q-header bordered style="height:6rem" class="bg-main text-white row items-center">
+    <q-header bordered style="height:6rem;border:none" class="bg-main text-white row items-center">
       <q-toolbar>
         <q-toolbar-title class="w100 row items-center justify-center">
-          <div style="font-size:2.5rem" class="font-title q-pl-md">
+          <div style="font-size:2.5rem;" class="text-grey-9 font-title q-pl-md">
             Sol Pratas
           </div>
         </q-toolbar-title>
 
-        <q-btn dense flat round icon="menu" @click="toggleRightDrawer" />
+        <q-btn dense flat round icon="menu" color="black" size="xl" @click="toggleRightDrawer" />
       </q-toolbar>
     </q-header>
 
-    <q-drawer show-if-above v-model="rightDrawerOpen" side="right" bordered>
-
-        <div class="row items-center justify-center bg-transparent">
-            <div style="font-size:2rem" class="font-title q-pt-xl text-weight-bold">Sol Pratas</div>
+    <q-drawer style="overflow-y:hidden" overlay v-model="rightDrawerOpen" side="right" bordered>
+      <div class="w100" style="position:relative">
+        <q-btn class="absolute-left q-mt-md q-ml-sm" dense flat round icon="close" color="red" size="md" @click="toggleRightDrawer" />
+      </div>
+        <div class="column items-center q-pt-sm justify-center bg-transparent">
+            <div style="font-size:2rem" class="font-title  q-mb-md text-weight-bold low-opacity">M E N U</div>
+            <span class="text-weight-bold font-satisfy text-white bg-grey-5 w100 text-center" style="font-size: 24px;">Sol Pratas</span>
             <!-- <div class="low-opacity w100" style="font-size: 12px;">{{ sessionData.role }}</div> -->
           <!-- <div class="low-opacity w100 text-center">@{{ sessionData.matricula }}</div> -->
         </div>
     <!-- items do menu -->
-    <q-scroll-area style="height: calc(100% - 5rem); margin-top: 2rem; border-right: 1px solid #ddd">
+    <q-scroll-area style="height: 80vh; margin-top: 1rem; border-right: 1px solid #ddd">
       <q-list padding>
         <q-item clickable v-ripple to="/">
           <q-item-section avatar>
-            <q-icon name="inventory_2" />
+            <q-icon name="home" />
           </q-item-section>
           <q-item-section>
             Página Inicial
@@ -59,14 +62,7 @@
         </q-item> -->
 
         <!-- <q-item clickable v-ripple class="absolute-bottom q-mb-sm" @click="verProjeto()"> -->
-        <q-item clickable v-ripple class="absolute-bottom q-mb-sm">
-          <q-item-section avatar>
-          </q-item-section>
-          <q-item-section class="low-opacity q-pl-xl">
-            Sol Pratas
-          </q-item-section>
-        </q-item>
-      </q-list>
+        </q-list>
     </q-scroll-area>
     </q-drawer>
     <q-page-container>
